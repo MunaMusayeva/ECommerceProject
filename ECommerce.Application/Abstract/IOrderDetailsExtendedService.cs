@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ECommerce.Domain.Entities;
 
-namespace ECommerce.Application.Abstract
+namespace ECommerce.Application.Abstract;
+
+public interface IOrderDetailsExtendedService
 {
-    internal interface IOrderDetailsExtendedService
-    {
-    }
+    List<OrderDetailsExtended> GetAll();
+    List<OrderDetailsExtended> GetAllByProduct(int productId);
+    OrderDetailsExtended GetById(int id);
+    void Add(OrderDetailsExtended orderDetailsExtended);
+    void Update(OrderDetailsExtended orderDetailsExtended);
+    void Delete(int orderDetailsExtendedId);
 }

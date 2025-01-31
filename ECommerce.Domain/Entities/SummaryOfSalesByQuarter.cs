@@ -1,9 +1,10 @@
-﻿using System;
+﻿using ECommerce.Domain.Abstraction;
+using System;
 using System.Collections.Generic;
 
 namespace ECommerce.Domain.Entities;
 
-public partial class SummaryOfSalesByQuarter
+public partial class SummaryOfSalesByQuarter : IEntity
 {
     public DateTime? ShippedDate { get; set; }
 

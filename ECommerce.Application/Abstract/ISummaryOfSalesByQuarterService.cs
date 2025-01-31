@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ECommerce.Domain.Entities;
 
-namespace ECommerce.Application.Abstract
+namespace ECommerce.Application.Abstract;
+
+public interface ISummaryOfSalesByQuarterService
 {
-    internal interface ISummaryOfSalesByQuarterService
-    {
-    }
+    List<SummaryOfSalesByQuarter> GetAll();
+    List<SummaryOfSalesByQuarter> GetAllByOrder(int orderId);
+    SummaryOfSalesByQuarter GetById(int id);
+    void Add(SummaryOfSalesByQuarter summaryOfSalesByQuarter);
+    void Update(SummaryOfSalesByQuarter summaryOfSalesByQuarter);
+    void Delete(int summaryOfSalesByQuarterId);
 }

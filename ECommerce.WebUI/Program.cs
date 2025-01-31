@@ -12,8 +12,18 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<ICategoryDal, EFCategoryDal>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+
+builder.Services.AddScoped<IOrderDetailDal, EFOrderDetailDal>();
+builder.Services.AddScoped<IOrderDetailService, OrderDetailService>();
+
+builder.Services.AddScoped<IOrderDetailsExtendedDal, EFOrderDetailsExtendedDal>();
+builder.Services.AddScoped<IOrderDetailsExtendedService,OrderDetailsExtendedService>();
+
 builder.Services.AddScoped<IProductDal,EFProductDal>();
 builder.Services.AddScoped<IProductService,ProductService>();
+
+builder.Services.AddScoped<ISummaryOfSalesByQuarterDal,EFSummaryOfSalesByQuarterDal>();
+builder.Services.AddScoped<ISummaryOfSalesByQuarterService, SummaryOfSalesByQuarterService>();
 
 var conn = builder.Configuration.GetConnectionString("DefaultConnection");
 

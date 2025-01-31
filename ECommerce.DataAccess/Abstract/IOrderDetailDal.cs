@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ECommerce.Domain.Entities;
+using ECommerce.Repository;
 
-namespace ECommerce.DataAccess.Abstract
+namespace ECommerce.DataAccess.Abstract;
+
+public interface IOrderDetailDal : IEntityRepository<OrderDetail>
 {
-    internal interface IOrderDetailDal
-    {
-    }
+
 }
